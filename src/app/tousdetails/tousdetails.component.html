@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="filters">
+      <a class="button" (click)="filter= 'Images' ">Images</a>
+      <a class="button" (click)="filter= 'Nom de la tarte/cake'"> Nom de la tarte/cake</a>
+      <a class="button"  (click)="filter= 'Description'">Description</a>
+      <a class="button" (click)="filter=''">Details</a>
+      <a class="button" (click)="filter= 'Prix'">Prix  </a>
+      
+    </div>
+  
+    <ul class="products">
+        <li class="product-item" *ngFor="let product of getFilteredProducts()">
+            <div class="product" >
+                <div class="product-details">
+                  <img [src]="getImageUrl(product)" [alt]="product.name" />
+                  <div class="product-info">
+                    <div class="name"></div>
+                    <div class="description"></div>
+                    <div class="category">Description: </div>
+                  </div>
+                </div>
+                <div class="price">
+                 <div>$</div>
+                  <button class="cta">Buy</button>
+                </div>
+              </div>
+        </li>
+      </ul>

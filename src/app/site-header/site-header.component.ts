@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-site-header',
+  templateUrl: './site-header.component.html',
+  styleUrls: ['./site-header.component.css']
 })
-export class AppComponent {
+export class SiteHeaderComponent {
   likeProduct() {
     
     // Save the like action to localStorage
@@ -24,6 +24,5 @@ export class AppComponent {
       document.getElementById('favorite')!.innerHTML = "Merci d'avoir aimé nos produits!";
     }
   }
-  
-}
 
+}
